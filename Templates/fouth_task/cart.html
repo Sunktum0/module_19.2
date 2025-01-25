@@ -1,0 +1,11 @@
+<!--{% extends "fourth_task/menu.html" %}-->
+
+{% block pagename %}Корзина{% endblock %}
+
+{% block content %}
+    <h1>Корзина</h1>
+    <li><a href="/">Главная</a></li>
+    <li><a href="{% url 'games_list' %}">Магазин</a></li>
+    <li><a href="{% url 'sign_up' %}">Регистрация</a></li>
+    <p>Извините, Ваша корзина пуста.</p>
+{% endblock %}

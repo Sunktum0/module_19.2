@@ -1,0 +1,18 @@
+<!--{% extends "fourth_task/menu.html" %}-->
+
+{% block pagename %}Магазин{% endblock %}
+
+{% block content %}
+    <h1>Магазин</h1>
+    <a href="/">Главная</a>
+    <a href="{% url 'cart' %}">Корзина</a>
+    <a href="{% url 'sign_up' %}">Регистрация</a>
+    <ul>
+        {% for game in games %}
+            <div>
+                <h2>{{ game.name }} | {{ game.description }}. Стоимость: {{ game.price }}</h2>
+                <li>{{ game }} <button>Добавить в корзину</button></li>
+            </div>
+        {% endfor %}
+    </ul>
+{% endblock %}
